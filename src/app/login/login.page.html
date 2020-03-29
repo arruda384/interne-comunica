@@ -17,7 +17,7 @@
         </ion-card>
       </ion-col>
       <ion-col>
-        <ion-card (click)="loginGoogle()" [ngClass]="checkBoxLoginGoogle?'imgColorful':'imgBlackWhite'"
+        <ion-card (click)="doGoogleLogin(); exibirTipoLogin(2)" [ngClass]="checkBoxLoginGoogle?'imgColorful':'imgBlackWhite'"
           class="buttonLogin backgroundWhite roundedCard">
           <img src="./assets/imgs/google.png" />
         </ion-card>
@@ -25,24 +25,37 @@
     </ion-row>
   </ion-grid>
 
-  <form *ngIf="exibirLoginAd" class="formLogin">
+  <form *ngIf="exibirLoginAd" class="formLogin" [formGroup]="form">
 
     <ion-item class="transparent">
       <ion-label>
         <ion-icon name="person-circle"></ion-icon>
       </ion-label>
-      <ion-input type="text" placeholder="Matricula" class="inputWithIcon">
+      <ion-input type="text" formControlName="matricula" placeholder="Matricula" class="inputWithIcon">
       </ion-input>
     </ion-item>
+
+    <div *ngIf="f.matricula.invalid && (f.matricula.dirty || f.matricula.touched)" class="alert alert-danger">
+      <p *ngIf="f.matricula.errors.required" class="validationField">
+        Este campo é obrigatório.
+      </p>
+    </div>
 
     <ion-item class="transparent">
       <ion-label>
         <ion-icon name="lock-closed"></ion-icon>
       </ion-label>
-      <ion-input type="password" placeholder="Senha" class="inputWithIcon"></ion-input>
+      <ion-input formControlName="password" type="password" placeholder="Senha" class="inputWithIcon"></ion-input>
     </ion-item>
 
-    <button class="buttonLog" ion-button (click)="loginAD()" expand="full">
+    
+    <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="alert alert-danger">
+      <p *ngIf="f.password.errors.required" class="validationField">
+        Este campo é obrigatório.
+      </p>
+    </div>
+
+    <button class="buttonLog" ion-button (click)="loginAD()"  [disabled]="form.invalid" expand="full">
       Login
     </button>
 
