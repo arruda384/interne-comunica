@@ -11,27 +11,20 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-card class="sideRedBar">
-    <ion-grid>
-      <ion-row>
-        <ion-col class="titleNotificationDetails">
-          COMO LAVAR AS MÃOS
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="dataNotificationDetails">
-          23/03/2019
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="contentNotificationDetails">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius pariatur dolor facere!
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos delectus ab perspiciatis cumque itaque pariatur
-          cupiditate facilis deserunt, fugiat dignissimos modi praesentium optio aliquid placeat mollitia harum,
-          explicabo sapiente eum?
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <ion-card  *ngFor="let not of noticias" (click)="goDetalheNoticia(not)" class="sideRedBar">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="titleNotification">
+            {{not.titulo}}
+          </ion-col>
+          <ion-col class="dataNotification">
+            {{not.data}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="contentNotification">{{not.texto}} </ion-col>
+        </ion-row>
+      </ion-grid>
   </ion-card>
 
 </ion-content>

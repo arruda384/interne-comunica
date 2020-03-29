@@ -16,20 +16,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card (click)="goDetalheVideo(1)" class="sideRedBar">
+  <ion-card  *ngFor="let not of noticias" (click)="goDetalheNoticia(not)" class="sideRedBar">
     <ion-grid>
       <ion-row>
         <ion-col class="titleNotification">
-          CARNAVAL + COVID-19
+          {{not.titulo}}
         </ion-col>
         <ion-col class="dataNotification">
-          23/03/2019
+          {{not.data}}
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col class="contentNotification">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius pariatur dolor facere!
-        </ion-col>
+        <ion-col class="contentNotification">{{not.texto}} </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>

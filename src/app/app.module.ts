@@ -12,11 +12,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from 'src/services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginPage } from './login/login.page';
+import { NoticiaService } from 'src/services/noticia.service';
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -24,6 +26,8 @@ import { LoginPage } from './login/login.page';
     StorageService,
     AuthService,
     LoginPage,
+    NoticiaService
+    
   
   ],
   bootstrap: [AppComponent]
