@@ -25,31 +25,31 @@ export class ComunicadoPage implements OnInit {
         idnoticia: 1,
         titulo:'Boletim 1 ',   
         data: '19/03/2020',
-        texto: 'Texto da notícia',
+        texto: 'Comitê de Crise',
         link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
         tipolink: 1
         
       },
       
-      { 
-        idnoticia: 2,
-        titulo:'Boletim 2 ',   
-        data: '20/03/2020',
-        texto: 'Texto da notícia',
-        link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
-        tipolink: 1
+      // { 
+      //   idnoticia: 2,
+      //   titulo:'Boletim 2 ',   
+      //   data: '20/03/2020',
+      //   texto: 'Texto da notícia',
+      //   link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
+      //   tipolink: 1
         
-      },
+      // },
 
-      { 
-        idnoticia: 3,
-        titulo:'Boletim 3',   
-        data: '21/03/2020',
-        texto: 'Texto da notícia',
-        link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
-        tipolink: 1
+      // { 
+      //   idnoticia: 3,
+      //   titulo:'Boletim 3',   
+      //   data: '21/03/2020',
+      //   texto: 'Texto da notícia',
+      //   link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
+      //   tipolink: 1
         
-      },
+      // },
       
     ];
 
@@ -92,7 +92,8 @@ export class ComunicadoPage implements OnInit {
   }
 
   goDetalheNoticia(not: Noticias) {
-    this.router.navigateByUrl('/detalhe-video');
+    this.notService.setNoticia(not);
+    this.router.navigateByUrl('/detalhe-comunicado');
   }
 
 }

@@ -7,6 +7,17 @@ export const STORAGE_KEYS = {
     idade: "idade",
     email: "email",
     idprofissao: "idprofissao",
-    dat_nascimento: "dat_nascimento"
+    dat_nascimento: "dat_nascimento",
+
+
+    idnoticia :"idnoticia",
+    titulo : "titulo",
+    data: "data",
+    texto: "texto",
+    link: "link",
+    tipolink: "tipolink" 
+
   
   }
+
+  

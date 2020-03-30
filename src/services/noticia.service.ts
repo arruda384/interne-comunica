@@ -8,7 +8,7 @@ import { StorageService } from './storage.service';
 @Injectable()
 export class NoticiaService {
 
-  constructor(private http: HttpClient, public storage: StorageService) { }
+  constructor(private http: HttpClient, private storageService: StorageService) { }
 
   
 
@@ -24,6 +24,14 @@ export class NoticiaService {
       })
     };
     return httpOptions;
+  }
+
+  setNoticia(not: Noticias){
+    this.storageService.setNoticiaSelecionada(not);
+  }
+
+  getNoticia(){
+   return this.storageService.getNoticiaSelecionada();
   }
 
 }

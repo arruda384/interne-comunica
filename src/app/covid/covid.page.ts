@@ -242,8 +242,9 @@ export class CovidPage implements OnInit {
    }
  }
 
- goDetalheNoticia(not: Noticias) {
-  this.router.navigateByUrl('/detalhe-video');
+goDetalheNoticia(not: Noticias) {
+  this.notService.setNoticia(not);
+  this.router.navigateByUrl('/detalhe-covid');
 }
 
 }

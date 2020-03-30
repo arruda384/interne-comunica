@@ -11,18 +11,18 @@
 
 <ion-content [fullscreen]="true">
 
-    <ion-card  *ngFor="let not of noticias" (click)="goDetalheNoticia(not)" class="sideRedBar">
+    <ion-card class="sideRedBar">
       <ion-grid>
         <ion-row>
           <ion-col class="titleNotification">
-            {{not.titulo}}
+            {{noticia.titulo}}
           </ion-col>
           <ion-col class="dataNotification">
-            {{not.data}}
+            {{noticia.data}}
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col class="contentNotification">{{not.texto}} </ion-col>
+          <ion-col class="contentNotification">{{noticia.texto}} </ion-col>
         </ion-row>
       </ion-grid>
   </ion-card>

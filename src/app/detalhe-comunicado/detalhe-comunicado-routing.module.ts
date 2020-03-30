@@ -5,7 +5,7 @@ import { DetalheComunicadoPage } from './detalhe-comunicado.page';
 
 const routes: Routes = [
   {
-    path: ':not',
+    path: '',
     component: DetalheComunicadoPage
   }
 ];

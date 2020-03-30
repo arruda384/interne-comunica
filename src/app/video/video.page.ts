@@ -84,13 +84,7 @@ export class VideoPage implements OnInit {
   }
 
   goDetalheNoticia(not: Noticias) {
-
-    // const modalRef = this.router.navigateByUrl("/detalhe-video") ;
-
-    // const modalRef = this.modalService.open(FiltroPedidoModalComponent, { windowClass: 'mys-modal' });
-    // modalRef.componentInstance.noticia = not;
-     
-
+    this.notService.setNoticia(not);
     this.router.navigateByUrl('/detalhe-video');
   }
 

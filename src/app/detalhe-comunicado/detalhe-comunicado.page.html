@@ -15,25 +15,22 @@
     <ion-grid>
       <ion-row>
         <ion-col class="titleNotificationDetails">
-          RECEPÇÃO DA CASA 1
+          {{noticia.titulo}}
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="dataNotificationDetails">
-          23/03/2019
+          {{noticia.data}}
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="contentNotificationDetails">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius pariatur dolor facere!
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos delectus ab perspiciatis cumque itaque pariatur
-          cupiditate facilis deserunt, fugiat dignissimos modi praesentium optio aliquid placeat mollitia harum,
-          explicabo sapiente eum?
+         {{noticia.texto}}
         </ion-col>
       </ion-row>
-      <ion-row>
-        <a href="http://sistemas.interne.com.br:8082/boletim/boletim001.pdf" download="Boletim Nº1 - COVID19 " class="buttonLink">
-            DOWNLOAD DO PDF
+      <ion-row *ngIf="noticia.link">
+        <a href="{{noticia.link}}" download="Boletim Nº1 - COVID19 " class="buttonLink">
+            DOWNLOAD DO PDF 
         </a>
       </ion-row>
     </ion-grid>

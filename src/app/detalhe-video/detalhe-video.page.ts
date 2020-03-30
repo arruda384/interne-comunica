@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Noticias } from 'src/models/noticiais';
+import { NoticiaService } from 'src/services/noticia.service';
 
 @Component({
   selector: 'app-detalhe-video',
@@ -8,10 +10,11 @@ import { Router } from '@angular/router';
 })
 export class DetalheVideoPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private notService: NoticiaService ) { }
+  noticia = new Noticias();
 
   ngOnInit() {
- 
+    this.noticia = this.notService.getNoticia();
   }
 
   go(page) {

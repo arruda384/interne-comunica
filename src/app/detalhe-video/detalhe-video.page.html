@@ -14,25 +14,20 @@
   <ion-card class="sideRedBar">
     <ion-grid>
       <video class="videoCenter" width="320" height="240" controls>
-        <source src="http://sistemas.interne.com.br:8082/video/VIDEO_01.mp4" type="video/mp4">
+          <source src="{{noticia.link}}" type="video/mp4">
       </video>
       <ion-row>
         <ion-col class="titleNotificationDetails">
-          CARNAVAL + COVID-19
+         {{noticia.titulo}}
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="dataNotificationDetails">
-          23/03/2019
+          {{noticia.data}}
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col class="contentNotificationDetails">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius pariatur dolor facere!
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos delectus ab perspiciatis cumque itaque pariatur
-          cupiditate facilis deserunt, fugiat dignissimos modi praesentium optio aliquid placeat mollitia harum,
-          explicabo sapiente eum?
-        </ion-col>
+        <ion-col class="contentNotificationDetails"> {{noticia.texto}}  </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>
