@@ -36,7 +36,7 @@ export class VideoPage implements OnInit {
       
       { 
         idnoticia: 2,
-        titulo:'Pânico e o COVID-19<',   
+        titulo:'Pânico e o COVID-19',   
         data: '23/03/2020',
         texto: 
           `Olá, amigos. Pânico? Medo? Ficar em casa? Deixar de trabalhar? Calma! Muita coisa está acontecendo aqui em Recife,

@@ -36,8 +36,20 @@ font-size: 15px;
 text-align: justified;
 }
 
+a{
+background-color: #ee1b24;
+color: white;
+padding: 14px 25px;
+margin: 0 auto;
+margin-top: 2%;
+margin-bottom: 2%;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
 ion-content {
---background: #CCCCCC url("../../assets/imgs/patient.png") no-repeat center !important;
+--background: #CCCCCC url("../../assets/imgs/news-paper.png") no-repeat center !important;
 }
 
 ion-card{
