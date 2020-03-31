@@ -34,8 +34,8 @@ export class LoginPage implements OnInit {
     private auth: AuthService) {
 
     this.form = this.formBuilder.group({
-      matricula: ['5019', [Validators.required]],
-      password: ['20071989', [Validators.required]],
+      matricula: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     });
 
   }

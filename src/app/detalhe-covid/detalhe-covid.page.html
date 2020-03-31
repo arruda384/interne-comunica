@@ -11,20 +11,29 @@
 
 <ion-content [fullscreen]="true">
 
-    <ion-card class="sideRedBar">
-      <ion-grid>
-        <ion-row>
-          <ion-col class="titleNotification">
-            {{noticia.titulo}}
-          </ion-col>
-          <ion-col class="dataNotification">
-            {{noticia.data}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="contentNotification">{{noticia.texto}} </ion-col>
-        </ion-row>
-      </ion-grid>
+  <ion-card class="sideRedBar">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="titleNotificationDetails">
+          {{noticia.titulo}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="dataNotificationDetails">
+          {{noticia.data}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="contentNotificationDetails">
+         {{noticia.texto}}
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="noticia.link">
+        <a href="{{noticia.link}}" download="Boletim Nº1 - COVID19 " class="buttonLink">
+            DOWNLOAD DO PDF 
+        </a>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 
 </ion-content>

@@ -25,7 +25,7 @@ export class ComunicadoPage implements OnInit {
         idnoticia: 1,
         titulo:'Boletim 1 ',   
         data: '19/03/2020',
-        texto: 'Comitê de Crise',
+        texto: `COMITÊ DE CRISE CORONAVÍRUS`,
         link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
         tipolink: 1
         

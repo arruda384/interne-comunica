@@ -79,7 +79,8 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-googleplus": {
-        "REVERSED_CLIENT_ID": "myreversedclientid"
+        "REVERSED_CLIENT_ID": "myreversedclientid",
+        "PLAY_SERVICES_VERSION": "15.0.1"
       }
     },
     "platforms": [
