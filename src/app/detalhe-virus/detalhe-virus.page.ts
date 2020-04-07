@@ -4,11 +4,11 @@ import { Noticias } from 'src/models/noticiais';
 import { NoticiaService } from 'src/services/noticia.service';
 
 @Component({
-  selector: 'app-detalhe-covid',
-  templateUrl: './detalhe-covid.page.html',
-  styleUrls: ['./detalhe-covid.page.scss'],
+  selector: 'app-detalhe-virus',
+  templateUrl: './detalhe-virus.page.html',
+  styleUrls: ['./detalhe-virus.page.scss'],
 })
-export class DetalheCovidPage implements OnInit {
+export class DetalheVirusPage implements OnInit {
 
   constructor(private router: Router, private  notService : NoticiaService) { }
 
@@ -31,10 +31,11 @@ export class DetalheCovidPage implements OnInit {
         this.router.navigateByUrl('/comunicado');
         break;
       case 3:
-        this.router.navigateByUrl('/covid');
+        this.router.navigateByUrl('/virus');
         break;
       default:
         break;
     }
   }
+
 }

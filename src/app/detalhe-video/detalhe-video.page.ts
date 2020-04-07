@@ -29,7 +29,7 @@ export class DetalheVideoPage implements OnInit {
         this.router.navigateByUrl('/comunicado');
         break;
       case 3:
-        this.router.navigateByUrl('/covid');
+        this.router.navigateByUrl('/virus');
         break;
       default:
         break;

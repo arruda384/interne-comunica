@@ -23,33 +23,13 @@ export class ComunicadoPage implements OnInit {
     this.noticiasFixa = [
       { 
         idnoticia: 1,
-        titulo:'Boletim 1 ',   
+        titulo:'BOLETIM 1 ',   
         data: '19/03/2020',
-        texto: `COMITÊ DE CRISE CORONAVÍRUS`,
+        texto: `COMITÊ DE CRISE`,
         link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
         tipolink: 1
         
       },
-      
-      // { 
-      //   idnoticia: 2,
-      //   titulo:'Boletim 2 ',   
-      //   data: '20/03/2020',
-      //   texto: 'Texto da notícia',
-      //   link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
-      //   tipolink: 1
-        
-      // },
-
-      // { 
-      //   idnoticia: 3,
-      //   titulo:'Boletim 3',   
-      //   data: '21/03/2020',
-      //   texto: 'Texto da notícia',
-      //   link: 'http://sistemas.interne.com.br:8082/boletim/boletim001.pdf',
-      //   tipolink: 1
-        
-      // },
       
     ];
 
@@ -84,7 +64,7 @@ export class ComunicadoPage implements OnInit {
         this.router.navigateByUrl('/comunicado');
         break;
       case 3:
-        this.router.navigateByUrl('/covid');
+        this.router.navigateByUrl('/virus');
         break;
       default:
         break;

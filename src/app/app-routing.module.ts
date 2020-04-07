@@ -5,10 +5,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
-    path: 'covid',
-    loadChildren: () => import('./covid/covid.module').then( m => m.CovidPageModule)
-  },
-  {
     path: 'comunicado',
     loadChildren: () => import('./comunicado/comunicado.module').then( m => m.ComunicadoPageModule)
   },
@@ -25,13 +21,19 @@ const routes: Routes = [
     loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
   },
   {
-    path: 'detalhe-covid',
-    loadChildren: () => import('./detalhe-covid/detalhe-covid.module').then( m => m.DetalheCovidPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'virus',
+    loadChildren: () => import('./virus/virus.module').then( m => m.VirusPageModule)
+  },
+  {
+    path: 'detalhe-virus',
+    loadChildren: () => import('./detalhe-virus/detalhe-virus.module').then( m => m.DetalheVirusPageModule)
+  },
+
+
 
 ];
 

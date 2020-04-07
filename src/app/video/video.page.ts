@@ -23,12 +23,12 @@ export class VideoPage implements OnInit {
       { 
         idnoticia: 1,
         titulo: 
-          `Gripe comum, resfriado ou COVID-19?`,   
+          `Gripe comum, resfriado ou Vírus?`,   
         data: '23/03/2020',
         texto: 
           `Olá, amigos. A Interne está aqui novamente pra discutir esse tema tão polêmico e atual que é a infecção pelo
-          Coronavírus. Mas diversas pessoas apresentam a mesma dúvida: qual a diferença entre uma gripe comum, um resfriado
-          e uma infecção pelo Coronavírus? Calma, pessoal, e se liga nas dicas!`,
+          Vírus. Mas diversas pessoas apresentam a mesma dúvida: qual a diferença entre uma gripe comum, um resfriado
+          e uma infecção pelo Vírus? Calma, pessoal, e se liga nas dicas!`,
         link: 'http://sistemas.interne.com.br:8082/video/VIDEO_01.mp4',
         tipolink: 1
         
@@ -36,11 +36,11 @@ export class VideoPage implements OnInit {
       
       { 
         idnoticia: 2,
-        titulo:'Pânico e o COVID-19',   
+        titulo:'Pânico e o Vírus',   
         data: '23/03/2020',
         texto: 
           `Olá, amigos. Pânico? Medo? Ficar em casa? Deixar de trabalhar? Calma! Muita coisa está acontecendo aqui em Recife,
-          tudo isso por causa do Coronavírus, mas a gente está aqui pra ajudar você e tirar suas dúvidas.`,
+          tudo isso por causa do Vírus, mas a gente está aqui pra ajudar você e tirar suas dúvidas.`,
         link: 'http://sistemas.interne.com.br:8082/video/VIDEO_02.mp4',
         tipolink: 1
         
@@ -48,11 +48,11 @@ export class VideoPage implements OnInit {
 
       { 
         idnoticia: 3,
-        titulo:'Carnaval e o COVID-19',   
+        titulo:'Carnaval e o Vírus',   
         data: '21/03/2020',
         texto: 
           `Olá, amigos. O Carnaval chegou, e com ele diversas infecções são propensas a serem transmitidas nessa época
-          também. Como lidar com o Coronavírus nessa época?`,
+          também. Como lidar com o Vírus nessa época?`,
         link: 'http://sistemas.interne.com.br:8082/video/VIDEO_03.mp4',
         tipolink: 1
         
@@ -76,7 +76,7 @@ export class VideoPage implements OnInit {
         this.router.navigateByUrl('/comunicado');
         break;
       case 3:
-        this.router.navigateByUrl('/covid');
+        this.router.navigateByUrl('/virus');
         break;
       default:
         break;

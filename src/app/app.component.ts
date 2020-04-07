@@ -5,8 +5,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { LoginPage } from './login/login.page';
 import { HomePage } from './home/home.page';
 import { Router } from '@angular/router';
-import { CovidPage } from './covid/covid.page';
-
 
 @Component({
   selector: 'app-root',

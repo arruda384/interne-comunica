@@ -4,11 +4,11 @@ import { Noticias } from 'src/models/noticiais';
 import { NoticiaService } from 'src/services/noticia.service';
 
 @Component({
-  selector: 'app-covid',
-  templateUrl: './covid.page.html',
-  styleUrls: ['./covid.page.scss'],
+  selector: 'app-virus',
+  templateUrl: './virus.page.html',
+  styleUrls: ['./virus.page.scss'],
 })
-export class CovidPage implements OnInit {
+export class VirusPage implements OnInit {
   noticias  = new Array<Noticias>();
   noticiasFixa = new Array<Noticias>();
   idTipoNoticia : number;
@@ -21,7 +21,7 @@ export class CovidPage implements OnInit {
    this.noticiasFixa = [
      { 
        idnoticia: 1,
-       titulo:'NOVO CORONAVÍRUS',   
+       titulo:'O VÍRUS',   
        data: '28/03/2020',
        texto: 'Está todo mundo falando " fique em casa", mas você sabe o porquê?',
        link: '',
@@ -41,7 +41,7 @@ export class CovidPage implements OnInit {
 
      { 
        idnoticia: 3,
-       titulo:'NOVO CORONAVÍRUS',   
+       titulo:'O VÍRUS',   
        data: '27/03/2020',
        texto: 'Higienização dos alimentos',
        link: '',
@@ -51,7 +51,7 @@ export class CovidPage implements OnInit {
 
      { 
       idnoticia: 4,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '27/03/2020',
       texto: 'Depoimento de uma enfermeira',
       link: '',
@@ -61,7 +61,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 5,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '25/03/2020',
       texto: 'Hábitos saudáveis',
       link: '',
@@ -71,7 +71,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 6,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '25/03/2020',
       texto: 'Aprenda como lavar as mãos corretamente',
       link: '',
@@ -84,7 +84,7 @@ export class CovidPage implements OnInit {
       titulo:'FIQUE EM CASA',   
       data: '23/03/2020',
       texto: 
-        `Nós estamos de peito aberto para enfrentar os desafios que a pandemia do novo Coronavírus tem imposto ao nosso
+        `Nós estamos de peito aberto para enfrentar os desafios que a pandemia do O VÍRUS tem imposto ao nosso
         dia a dia`,
       link: '',
       tipolink: 1
@@ -93,7 +93,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 8,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '21/03/2020',
       texto: 
         `CEO reafirma compromisso com pacientes e familiares`,
@@ -104,10 +104,10 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 9,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '20/03/2020',
       texto: 
-        `Lavar as mãos com água e sabão é a melhor maneira de se prevenir contra o novo Coronavírus`,
+        `Lavar as mãos com água e sabão é a melhor maneira de se prevenir contra o O VÍRUS`,
       link: '',
       tipolink: 1
       
@@ -115,7 +115,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 10,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '20/03/2020',
       texto: 
         `Os perigos da automedicação`,
@@ -129,7 +129,7 @@ export class CovidPage implements OnInit {
       titulo:'PODCAST',   
       data: '20/03/2020',
       texto: 
-        `Minuto da Saúde: Novo Coronavírus`,
+        `Minuto da Saúde: O VÍRUS`,
         link: '',
       tipolink: 1
       
@@ -137,7 +137,7 @@ export class CovidPage implements OnInit {
      
     { 
       idnoticia: 12,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '19/03/2020',
       texto: 
         `Você sabe quem deve usar máscara?`,
@@ -149,7 +149,7 @@ export class CovidPage implements OnInit {
       
     { 
       idnoticia: 13,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '19/03/2020',
       texto: 
         `Como se tratar em casa`,
@@ -160,7 +160,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 14,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '18/03/2020',
       texto: 
         `Como se tratar em casa`,
@@ -171,7 +171,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 14,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '18/03/2020',
       texto: 
         `Como se tratar em casa`,
@@ -182,7 +182,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 15,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '18/03/2020',
       texto: 
         ` Saiba as diferenças para os sintomas da gripe e do resfriado`,
@@ -193,7 +193,7 @@ export class CovidPage implements OnInit {
 
     { 
       idnoticia: 16,
-      titulo:'NOVO CORONAVÍRUS',   
+      titulo:'O VÍRUS',   
       data: '18/03/2020',
       texto: 
         `Previna-se!`,
@@ -235,7 +235,7 @@ export class CovidPage implements OnInit {
        this.router.navigateByUrl('/comunicado');
        break;
      case 3:
-       this.router.navigateByUrl('/covid');
+       this.router.navigateByUrl('/virus');
        break;
      default:
        break;
@@ -244,7 +244,8 @@ export class CovidPage implements OnInit {
 
 goDetalheNoticia(not: Noticias) {
   this.notService.setNoticia(not);
-  this.router.navigateByUrl('/detalhe-covid');
+  this.router.navigateByUrl('/detalhe-virus');
 }
 
 }
+
