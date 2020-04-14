@@ -24,7 +24,7 @@
     </ion-grid>
   </ion-card>
 
-  <ion-card (click)="go(2)" class="sideRedBar">
+  <ion-card *ngIf="funcionario" (click)="go(2)" class="sideRedBar">
     <ion-grid>
       <ion-row>
         <ion-col>

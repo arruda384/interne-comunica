@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
@@ -7,7 +7,9 @@ import { AlertController } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
+
+  funcionario: boolean;
 
   constructor(private router: Router, public alertController: AlertController) { }
 
@@ -30,6 +32,18 @@ export class HomePage {
     }
   }
 
+  ngOnInit(){
+
+    
+    if(localStorage.getItem("matricula") ==='0'){
+      this.funcionario = false;
+
+    }else{
+      this.funcionario = true;
+    }
+  
+
+  }
   async preLogout() {
     const alert = await this.alertController.create({
       header: 'Logout',
