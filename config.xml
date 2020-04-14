@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="mob.interne.comunica" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="mob.interne.comunica.beta" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Interne Comunica</name>
     <description>Aplicativo para comunicação de nóticias.</description>
     <author email="tic@interne.com.br" href="http://ionicframework.com/">Interne Soluções em Saúde</author>

@@ -28,7 +28,9 @@ export class AppComponent implements OnInit , OnDestroy{
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.rootPage = (localStorage.getItem('matricula') != null) ? 'home' : 'login';
+      // alert(localStorage.getItem('matricula'))
+      this.rootPage = (localStorage.getItem('matricula') != null || localStorage.getItem('matricula') != undefined) ? 'home' : 'login';
+
       this.rota.navigateByUrl(this.rootPage);
 
 
