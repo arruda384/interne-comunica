@@ -3,7 +3,7 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">localhost</domain>
     </domain-config>
-    <domain-config cleartextTrafficPermitted="false">
+    <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">sistemas.interne.com.br</domain>
     </domain-config>
 </network-security-config>
