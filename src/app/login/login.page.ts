@@ -145,7 +145,8 @@ export class LoginPage implements OnInit {
 
     this.googlePlus.login({
       'scopes': '', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
-      'webClientId': '185631541508-mu5s1bkfnghe6iekparc90g0b67p7l5a.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
+      'webClientId' : '185631541508-i8tvo2fvb51shtfp796acdf12kgpcbgb.apps.googleusercontent.com',
+      // 'webClientId': '185631541508-mu5s1bkfnghe6iekparc90g0b67p7l5a.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
       'offline': true // Optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
     })
       .then(user => {
@@ -157,6 +158,7 @@ export class LoginPage implements OnInit {
         localStorage.setItem(STORAGE_KEYS.telefone, (null));
         localStorage.setItem(STORAGE_KEYS.email, (user.email));
         loading.dismiss();
+        // alert("Sucesso")
         this.router.navigateByUrl('home');
 
       }, err => {
